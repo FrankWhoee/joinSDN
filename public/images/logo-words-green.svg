@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="79.476089mm"
+   height="88.389748mm"
+   viewBox="0 0 79.476089 88.389748"
+   version="1.1"
+   id="svg3550"
+   inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
+   sodipodi:docname="logo-words-green.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3552"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.68684764"
+     inkscape:cx="-208.92552"
+     inkscape:cy="262.06685"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs3547" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-160.18803,-79.07361)">
+    <g
+       id="g83679"
+       transform="translate(406.58777,-113.37883)"
+       style="fill:#00aa44;fill-opacity:0.33333334">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.9305px;line-height:0;font-family:'Happy markers';-inkscape-font-specification:'Happy markers';letter-spacing:0px;word-spacing:0px;fill:#00aa44;fill-opacity:0.33333334;stroke-width:0.673265"
+         x="-234.63759"
+         y="280.3425"
+         id="text45705"><tspan
+           sodipodi:role="line"
+           id="tspan45703"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Super Mario 286';-inkscape-font-specification:'Super Mario 286, ';fill:#00aa44;fill-opacity:0.33333334;stroke-width:0.673265"
+           x="-234.63759"
+           y="280.3425">SDN</tspan></text>
+      <path
+         id="path54120"
+         style="vector-effect:none;fill:#00aa44;fill-opacity:0.33333334;stroke:none;stroke-width:0.24183px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -201.81093,192.45244 -20.64387,3.7323 -16.8445,18.14481 -5.54791,14.59008 2.13773,11.2555 -3.69026,7.85427 5.69197,0.3788 2.14058,-2.82496 3.20046,3.86219 7.39896,0.30229 4.60233,-5.32594 5.14408,8.15279 24.71246,1.96157 -0.0713,-7.7003 -7.76785,-0.30796 -2.24164,-3.63548 16.33673,-6.73533 2.50521,3.0824 7.62001,2.19629 10.20409,0.28906 -2.1878,-4.53148 -6.10858,-0.95266 -2.89534,-5.16203 1.56245,-1.22193 2.85614,-13.16981 2.65399,-4.25185 -0.67306,-1.66304 -8.91889,4.90554 -9.68785,1.12318 -7.30874,4.62643 -16.17709,-0.23994 -4.47243,-3.88109 1.46419,-2.76499 3.84898,2.31062 14.48901,0.39958 6.77312,-3.7512 9.68265,-2.02815 9.76529,-4.23723 -2.78718,-9.83188 -7.09667,0.43972 z m 0.15161,15.27968 6.29025,0.65589 0.0485,1.67895 -0.68901,1.72601 -5.10089,0.6282 -0.77745,-2.48253 z"
+         sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccccc" />
+    </g>
+  </g>
+</svg>
