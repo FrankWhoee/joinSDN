@@ -41,11 +41,11 @@ const httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(port);
 httpServer.on('error', onError);
-httpServer.on('listening', onListening);
+// httpServer.on('listening', onListening);
 
 httpsServer.listen(port);
 httpsServer.on('error', onError);
-httpsServer.on('listening', onListening);
+// httpsServer.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -98,10 +98,10 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
+// function onListening() {
+//   var addr = server.address();
+//   var bind = typeof addr === 'string'
+//     ? 'pipe ' + addr
+//     : 'port ' + addr.port;
+//   debug('Listening on ' + bind);
+// }
