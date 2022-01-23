@@ -16,6 +16,12 @@ body {
 .h01{
   font-size: 8vw;
 }
+.h02{
+  font-size: 6vw;
+}
+.h03{
+  font-size: 4vw;
+}
 
 .green{
   color: #00aa44;
@@ -98,6 +104,35 @@ input{
   border-radius: 50px;
 }
 
+.button-green2 {
+  background-color: #00aa44;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  display: inline-block;
+  border-radius: 200px;
+  font-weight: bold;
+}
+
+.button-green2:hover{
+  color: white;
+}
+
+.mfbutton{}
+
+.mf{}
+
+.mobile-unfriendly {display:none;}
+
+@media all and (min-width: 1000px) {
+  .deskContent {display:block;}
+  .mobile-unfriendly {display:block;}
+}
+
+
 .carousel-image{
   width: 230px;
   object-fit: cover;
@@ -111,4 +146,8 @@ input{
 
 .shorterhr{
   width: 80%;margin: auto;
+}
+
+.rankicons{
+
 }

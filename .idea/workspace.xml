@@ -2,38 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50b882c3-4335-4883-bcba-5aa4d3ac14eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/javascripts/cosmetic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/javascripts/date.format.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/0x0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/138585_IGDB-285x380.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/19976_IGDB-285x380.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/1Valorant_2021_SocialCover_Epic GamesOfferLibraryPortrait_1200x1600_MB01_1200x1600-d9e4679ecd91d5cbe0d16e64ab782ef9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/2227205-i2cs9uzmq4yua.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/27471_IGDB-272x380.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/3657_Fortnite.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/374cc3f8-3d3c-4c39-a282-572723b2b5d3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/472857-world-of-tanks-warriors-mega-xbox-one-front-cover.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/513143-272x380.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/538006-apex-legends-xbox-one-front-cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/59472_Aim_Lab.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/753838-splitgate-arena-warfare-xbox-one-front-cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/781935-enlisted-xbox-series-front-cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/8765729.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/EG_y30uU0AApGSG.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/GY46AuwzhhR07_CkpdIMhzIqG7eTY9yA_ss8Pkxo9II.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/StarCraft II.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/boxart_league_of_legends_300x400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/covers/thumb-1920-470630.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/cosmetic.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/cosmetic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/cosmetic.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/cosmetic.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/cosmetic.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/cosmetic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +86,7 @@
       <updated>1642703226838</updated>
       <workItem from="1642703228069" duration="2988000" />
       <workItem from="1642789192388" duration="24338000" />
-      <workItem from="1642897596415" duration="23087000" />
+      <workItem from="1642897596415" duration="30024000" />
     </task>
     <servers />
   </component>
@@ -140,30 +114,30 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2514" y="313" width="722" height="678" key="EditFileWatcherDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642903136325" />
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1642920603518">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1642925667278">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642920603518" />
-    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1642920603518">
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642925667278" />
+    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1642925667278">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642920603518" />
-    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1642920603517">
+    <state width="1897" height="275" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642925667278" />
+    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1642925667278">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642920603517" />
-    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1642920603518">
+    <state width="1897" height="275" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642925667278" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1642925667278">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1897" height="275" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642920603518" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642925667278" />
     <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1642903137182">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642903137182" />
-    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1642903495438">
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1642927257619">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642903495438" />
+    <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1642927257619" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
