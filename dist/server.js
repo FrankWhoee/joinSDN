@@ -14,14 +14,14 @@ var https = require('https');
 var fs = require('fs');
 
 var options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
+  key: fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/fullchain.pem')
 };
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '80');
+var port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 /**
  * Create HTTP server.
