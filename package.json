@@ -8,12 +8,21 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^14.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "^3.0.2"
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.67.0"
   }
 }

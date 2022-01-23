@@ -32,10 +32,12 @@
 </div>
 <div style="position: absolute; top: 90%; left: 50%">
 
-    <img class="arrow" src="images/arrow.svg" style="width: 20px;">
+    <a href="#join"><img class="arrow" src="images/arrow.svg" style="width: 20px;"></a>
 </div>
 
 <div style=""> <!--Used to be a transparent frog background lol-->
+    <br>
+    <img src="images/Viper.png" style="position: absolute; z-index: -999;; right: 0px; opacity: 0.25">
     <div class="container" id="join">
         <div class="text-center pb-5">
             <h1 class="h0 green pt-5">JOIN SDN</h1>
@@ -74,13 +76,38 @@
                 <h2 class="bullet-text">LET US KNOW IF YOU JOINED!</a></h2>
             </div>
         </div>
-        <form class="text-center py-5">
+        <form class="text-center py-5" action="/idsubmit" method="post" id="idinput">
+            <span style="color: coral" id="inputerror"></span>
+            <span style="color: #00aa44" id="inputsuccess"></span><br><br>
             <input type="text" placeholder="RIOT ID#TAG" id="riotid" name="riotid">
             <span class="px-2"></span>
-            <input class="button-green" value="SUBMIT" type="submit">
+            <input class="button-green" value="SUBMIT" type="submit"><br><br>
+            <span style="color: grey">Only your Riot ID is stored. All code for this website is <u><a style="color: grey"
+                                                                                                      href="https://github.com/FrankWhoee/joinSDN">open source.</a></u></span>
         </form>
-        <span style="color: grey">Only your Riot ID is stored. All code for this website is <u><a style="color: grey"
-                                                                                                  href="https://github.com/FrankWhoee/joinSDN">open source.</a></u></span>
+
+
+
+
+        <div>
+            <div class="container  text-center">
+                <h1>SDN PRO PLAYERS</h1>
+                <hr>
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <b>ID</b>
+                    </div>
+                    <div class="col-sm-4">
+                        <b>Date Joined</b>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="playerlist">
+
+            </div>
+
+        </div>
         <br><br><br>
     </div>
 </div>
@@ -92,7 +119,7 @@
         <h1 style="font-size: 10vw">BIGGEST</h1>
         <h1>E-SPORT ORGANIZATION IN NA</h1>
         <br><br><br><br><br>
-        <h1 class="h0">57</h1>
+        <h1 class="h0" id="playercount">0</h1>
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col">
@@ -115,28 +142,28 @@
             <div class="col">
                 <div class="row g-0" style="opacity: 0.8">
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/1Valorant_2021_SocialCover_Epic%20GamesOfferLibraryPortrait_1200x1600_MB01_1200x1600-d9e4679ecd91d5cbe0d16e64ab782ef9.jpeg">
+                        <img class="carousel-image" id="cim1" src="images/covers/1Valorant_2021_SocialCover_Epic%20GamesOfferLibraryPortrait_1200x1600_MB01_1200x1600-d9e4679ecd91d5cbe0d16e64ab782ef9.jpeg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/538006-apex-legends-xbox-one-front-cover.jpg">
+                        <img class="carousel-image" id="cim2" src="images/covers/538006-apex-legends-xbox-one-front-cover.jpg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/472857-world-of-tanks-warriors-mega-xbox-one-front-cover.jpeg">
+                        <img class="carousel-image" id="cim3" src="images/covers/472857-world-of-tanks-warriors-mega-xbox-one-front-cover.jpeg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/thumb-1920-470630.jpg">
+                        <img class="carousel-image" id="cim4" src="images/covers/thumb-1920-470630.jpg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/GY46AuwzhhR07_CkpdIMhzIqG7eTY9yA_ss8Pkxo9II.jpg">
+                        <img class="carousel-image" id="cim5" src="images/covers/GY46AuwzhhR07_CkpdIMhzIqG7eTY9yA_ss8Pkxo9II.jpg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/19976_IGDB-285x380.jpg">
+                        <img class="carousel-image"id="cim6" src="images/covers/19976_IGDB-285x380.jpg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/EG_y30uU0AApGSG.jpeg">
+                        <img class="carousel-image" id="cim7" src="images/covers/EG_y30uU0AApGSG.jpeg">
                     </div>
                     <div class="col-sm-auto">
-                        <img class="carousel-image" src="images/covers/StarCraft%20II.jpg">
+                        <img class="carousel-image" id="cim8" src="images/covers/StarCraft%20II.jpg">
                     </div>
                 </div>
             </div>
@@ -145,26 +172,35 @@
 </div>
 <div class="container text-center pt-5">
     <img src="images/Sage.png" style="position: absolute; z-index: -999; opacity: 0.5; right: 50px">
-    <h1 class="h0">the best part?</h1>
+    <h1 class="h01">the best part?</h1>
     <h1>Anyone can join. It's as easy as adding SDN to your username in any game.</h1>
     <br><br><br>
     <img src="images/players.svg" style="width: 50%">
 </div>
 <br><br><br><br><br><br>
 <div style="position: absolute; height: 50vh; width: 100vw; max-width:100%; display: flex; justify-content: center; align-items: center;">
-        <span style="line-height: 500px; font-size: 30vh; opacity: 0.05">CONTACT</span>
+        <span style="line-height: 500px; font-size: 15vw; opacity: 0.05">CONTACT</span>
 </div>
 <div id="contact" style="height: 50vh; width: 100vw; max-width:100%; display: flex; justify-content: center; align-items: center;">
         <span style="color: #00aa44; font-size: 10vh; line-height: 500px">org@joinSDN.com</span>
 </div>
-<div style="background: #00aa44; height: 30vh; width: 100vw; max-width:100%; display: flex; justify-content: center; align-items: center;">
-    <img src="images/logo-words.svg" style="height: 25%">
+<div style="background: #00aa44;height: 30vh; width: 100vw; max-width:100%; display: flex; justify-content: center; align-items: center;">
+<!--    <img src="images/kj.jpg" style="position: absolute; height: 30vh; width: 100vw; object-fit: fill; z-index: 1; opacity: 0.4">-->
+    <img src="images/logo-words.svg" style="height: 25%; z-index: 999">
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"
         integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="javascripts/script.js"></script>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="javascripts/countUp.js"></script>
+<script src="javascripts/compiled.js"></script>
+<script src="javascripts/cosmetic.js" type="module"></script>
+<script src="javascripts/date.format.js"></script>
 </body>
 </html>
