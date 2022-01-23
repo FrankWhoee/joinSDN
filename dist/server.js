@@ -9,13 +9,19 @@ var app = require('./app');
 
 var debug = require('debug')('joinsdn:server');
 
+var http = require('http');
+
 var https = require('https');
 
 var fs = require('fs');
 
-var options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/fullchain.pem')
+var privateKey = fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/privkey.pem', 'utf8');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/cert.pem', 'utf8');
+var ca = fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/chain.pem', 'utf8');
+var credentials = {
+  key: privateKey,
+  cert: certificate,
+  ca: ca
 };
 /**
  * Get port from environment and store in Express.
@@ -27,14 +33,18 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-var server = https.createServer(options, app);
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+httpServer.listen(port);
+httpServer.on('error', onError);
+httpServer.on('listening', onListening);
+httpsServer.listen(port);
+httpsServer.on('error', onError);
+httpsServer.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
