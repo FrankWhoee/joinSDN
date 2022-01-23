@@ -4,13 +4,18 @@ const dotenv = require('dotenv');
 dotenv.config();
 var dateFormat = require('../public/javascripts/date.format.js')
 var mysql = require('mysql2')
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'frankwhoee',
-  password: process.env.dbpass,
-  database: 'sdn'
-})
-connection.connect()
+try{
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'frankwhoee',
+    password: process.env.dbpass,
+    database: 'sdn'
+  })
+  connection.connect()
+}catch (e) {
+  
+}
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {title: 'Express'});
