@@ -10,9 +10,26 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/joinsdn.com/chain.pem', 'utf8');
+const certbasepath = '/etc/letsencrypt/live/joinsdn.com/'
+const privkeypath = 'privkey.pem'
+const certpath = 'cert.pem'
+const chainpath = 'chain.pem'
+var certsExist = fs.existsSync(certbasepath + privkeypath) && fs.existsSync(certbasepath + certpath) && fs.existsSync(certbasepath + chainpath);
+
+let privateKey = null;
+let certificate = null;
+let ca = null;
+
+if(!certsExist){
+  console.log("No certifications found. HTTPS server will not start. Port 443 will not be used.")
+}else{
+  privateKey = fs.readFileSync(certbasepath + privkeypath, 'utf8');
+  certificate = fs.readFileSync(certbasepath + certpath, 'utf8');
+  ca = fs.readFileSync(certbasepath + chainpath, 'utf8');
+}
+
+
+
 
 const credentials = {
   key: privateKey,
@@ -32,7 +49,10 @@ app.set('port', port);
  */
 
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+let httpsServer = null;
+if (certsExist){
+  httpsServer = https.createServer(credentials, app);
+}
 
 
 /**
@@ -42,9 +62,10 @@ const httpsServer = https.createServer(credentials, app);
 httpServer.listen(port);
 httpServer.on('error', onError);
 // httpServer.on('listening', onListening);
-
-httpsServer.listen(443);
-httpsServer.on('error', onError);
+if(certsExist){
+  httpsServer.listen(443);
+  httpsServer.on('error', onError);
+}
 // httpsServer.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
