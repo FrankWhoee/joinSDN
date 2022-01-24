@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/FrankWhoee/joinSDN/master/public/images/logo-green-bg.svg)
 # joinSDN
-
-This is the repository for the official SDN website.
+**Biggest e-sport organization in NA.**<br>
+This is the repository for the official SDN website. Check it out right now at [joinSDN.com](https://joinSDN.com).
 
 ### Technologies used:
 - React
