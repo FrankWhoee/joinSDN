@@ -42,17 +42,23 @@
     <g
        id="g83679"
        transform="translate(305.52881,-79.177514)">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.9305px;line-height:0;font-family:'Happy markers';-inkscape-font-specification:'Happy markers';letter-spacing:0px;word-spacing:0px;fill:#ffffff;stroke-width:0.673265"
-         x="-234.63759"
-         y="280.3425"
-         id="text45705"><tspan
-           sodipodi:role="line"
-           id="tspan45703"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Super Mario 286';-inkscape-font-specification:'Super Mario 286, ';fill:#ffffff;stroke-width:0.673265"
-           x="-234.63759"
-           y="280.3425">SDN</tspan></text>
+      <g
+         aria-label="SDN"
+         id="text45705"
+         style="font-size:26.9305px;line-height:0;font-family:'Happy markers';-inkscape-font-specification:'Happy markers';letter-spacing:0px;word-spacing:0px;fill:#ffffff;stroke-width:0.673265">
+        <path
+           d="m -215.11035,265.36504 -3.47151,4.28679 -4.07639,-2.61679 -1.02567,1.30182 7.27176,5.32561 -3.52411,6.65373 h -8.63933 l -6.03569,-4.79963 2.61678,-4.37883 5.19412,2.93237 0.77583,-1.20977 -7.61365,-4.52348 7.21916,-8.08704 h 6.48278 l 4.82592,5.11522 z"
+           style="font-family:'Super Mario 286';-inkscape-font-specification:'Super Mario 286, '"
+           id="path825" />
+        <path
+           d="m -205.10346,260.30242 5.65436,4.64183 1.15717,10.79587 -5.57546,4.54978 h -11.15091 v -18.77771 l 9.91484,-1.20977 z m -3.74765,7.19286 v 5.8779 l 3.62931,-1.27552 v -2.93237 l -3.62931,-1.67001 z"
+           style="font-family:'Super Mario 286';-inkscape-font-specification:'Super Mario 286, '"
+           id="path827" />
+        <path
+           d="m -195.64885,261.1966 4.02379,-0.55229 6.31184,8.58673 0.81528,-8.40263 5.78585,0.49968 -0.81528,18.89606 -4.51034,0.39449 -5.83844,-7.41641 -0.263,7.63996 -6.36443,-0.84158 z"
+           style="font-family:'Super Mario 286';-inkscape-font-specification:'Super Mario 286, '"
+           id="path829" />
+      </g>
       <path
          id="path54120"
          style="vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.24183px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
