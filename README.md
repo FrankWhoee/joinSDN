@@ -7,9 +7,9 @@ This is the repository for the official SDN website. Check it out right now at [
 We're the biggest e-sports organization in NA. The best part is that anyone can join SDN, it's as easy as adding SDN to your in-game name, in **any** game.
 
 ### Socials
-[Youtube](https://www.youtube.com/channel/UCEBdxCHTSBNP3wSsXxOXnEw)
-[Instagram](https://www.instagram.com/joinsdn/?hl=en)
-[Discord](https://discord.gg/hHX5a8Tap2)
+[Youtube](https://www.youtube.com/channel/UCEBdxCHTSBNP3wSsXxOXnEw)<br>
+[Instagram](https://www.instagram.com/joinsdn/?hl=en)<br>
+[Discord](https://discord.gg/hHX5a8Tap2)<br>
 Twitch (coming soon)
 
 ### Technologies used:
