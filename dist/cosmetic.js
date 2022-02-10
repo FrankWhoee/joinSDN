@@ -2,19 +2,24 @@
 
 var _countUp = require("./countUp.js");
 
-var selected = [];
+fetch("/covercount").then(function (response) {
+  return response.text();
+}).then(function (data) {
+  data = parseInt(data);
+  var selected = [];
 
-for (var i = 1; i <= 8; i++) {
-  var r = Math.floor(Math.random() * 20);
+  for (var i = 1; i <= 8; i++) {
+    var r = Math.floor(Math.random() * data);
 
-  while (selected.includes(r)) {
-    r = Math.floor(Math.random() * 20);
+    while (selected.includes(r)) {
+      r = Math.floor(Math.random() * data);
+    }
+
+    selected.push(r);
+    console.log("cim" + i);
+    document.getElementById("cim" + i).src = "images/covers/" + r + ".jpg";
   }
-
-  selected.push(r);
-  console.log("cim" + i);
-  document.getElementById("cim" + i).src = "images/covers/" + r + ".jpg";
-}
+});
 
 function changeRandomPicture() {
   var i = Math.floor(Math.random() * 8) + 1;

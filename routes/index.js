@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 var dateFormat = require('../public/javascripts/date.format.js')
 var mysql = require('mysql2')
+const fs = require('fs');
 try{
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -15,7 +16,7 @@ try{
 }catch (e) {
   
 }
-
+console.log('Current directory: ' + process.cwd());
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {title: 'Express'});
@@ -27,6 +28,11 @@ router.get('/players', function (req, res, next) {
 
     res.json(rows)
   })
+});
+
+router.get('/covercount', function (req, res, next) {
+  var l = fs.readdirSync(process.cwd() + '/public/images/covers').length
+  res.json(l)
 });
 
 router.get('/count', function (req, res, next) {

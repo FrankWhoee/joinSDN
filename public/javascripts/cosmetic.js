@@ -1,15 +1,21 @@
 import {CountUp} from "./countUp.js";
 
-var selected = []
-for (var i = 1; i <= 8; i++) {
-    var r = Math.floor(Math.random() * 20)
-    while (selected.includes(r)) {
-        r = Math.floor(Math.random() * 20)
+fetch("/covercount").then(response=>response.text()).then(data => {
+    data = parseInt(data)
+
+    var selected = []
+    for (var i = 1; i <= 8; i++) {
+        var r = Math.floor(Math.random() * data)
+        while (selected.includes(r)) {
+            r = Math.floor(Math.random() * data)
+        }
+        selected.push(r)
+        console.log("cim" + i)
+        document.getElementById("cim" + i).src = "images/covers/" + r + ".jpg";
     }
-    selected.push(r)
-    console.log("cim" + i)
-    document.getElementById("cim" + i).src = "images/covers/" + r + ".jpg";
-}
+
+})
+
 
 function changeRandomPicture(){
     var i = Math.floor(Math.random() * 8) + 1
