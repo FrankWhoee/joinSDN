@@ -5,6 +5,9 @@ dotenv.config();
 var dateFormat = require('../public/javascripts/date.format.js')
 var mysql = require('mysql2')
 const fs = require('fs');
+var crypto = require('crypto')
+var fetch = require('node-fetch')
+
 try{
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -16,11 +19,45 @@ try{
 }catch (e) {
   
 }
+
+connection.query('SHOW TABLES LIKE "players"', function (err, rows, fields) {
+  if(rows.length <= 0){
+    connection.query('CREATE TABLE players (name varchar(15), tag varchar(5), time_joined date)')
+  }
+})
+
+connection.query('SHOW TABLES LIKE "visitorlog"', function (err, rows, fields) {
+  if(rows.length <= 0){
+
+    connection.query('CREATE TABLE visitorlog (iphash varchar(255), country varchar(255), region varchar(255), city varchar(255),time_visited date, PRIMARY KEY (iphash))')
+  }
+})
+
 console.log('Current directory: ' + process.cwd());
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  var hash = crypto.createHash('sha256')
+      .update(req.ip)
+      .digest('hex');
+  const today = new Date()
+  const date = today.format("yyyy-mm-dd")
+  fetch("http://ip-api.com/json/" + "130.44.164.73").then((resp)=> resp.json()).then((json) => {
+    console.log(json)
+      connection.query(
+          'INSERT INTO visitorlog VALUES (?, ?, ?, ?, ?);',[hash,json.country, json.region,json.city, date],
+          function(error, result, fields){
+              if(error){}
+            }
+      )
+  })
   res.render('index', {title: 'Express'});
 });
+
+router.get('/logs', function (req, res, next) {
+  res.render('logs', {title: 'Express'});
+});
+
+// router.get('')
 
 router.get('/players', function (req, res, next) {
   connection.query('SELECT * FROM players', function (err, rows, fields) {
