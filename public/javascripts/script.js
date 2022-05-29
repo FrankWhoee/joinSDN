@@ -6,18 +6,6 @@ anime({
     easing: 'easeInOutSine'
 });
 
-
-const example_list = [{name: "SDN KazzaZoo#001", date: "June 9th, 2019"}, {
-    name: "SDN SilverZala#002",
-    date: "June 9th, 2019"
-}, {name: "SDN TheFlash1205#003", date: "June 9th, 2019"}, {
-    name: "SDN TreeRacks#004",
-    date: "June 9th, 2019"
-}, {name: "SDN FrankWhoee#005", date: "March 6th, 2020"},
-    {name: "SDN Oblivious#006", date: "April 16th, 2019"},
-    {name: "SDN SnazzyTurtles#007", date: "December 29th, 2021"}]
-
-
 class PlayerList extends React.Component {
     constructor(props) {
         super(props);
