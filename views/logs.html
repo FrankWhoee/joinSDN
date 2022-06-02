@@ -27,11 +27,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="javascripts/date.format.js"></script>
+    <style>
+        *{
+            font-family: 'Courier Prime', sans-serif;
+        }
+    </style>
 </head>
 <body>
-
+<div class="container py-3">
+    <h1>Frog Logs</h1>
+    <table id="logtable" style=" width: 100%;">
+        <tr>
+            <th>ip hash</th>
+            <th>country</th>
+            <th>region</th>
+            <th>city</th>
+            <th>time visited</th>
+        </tr>
+    </table>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+<script src="javascripts/logs.js"></script>
 </body>
 </html>

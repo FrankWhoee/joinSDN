@@ -8,6 +8,10 @@ const fs = require('fs');
 var crypto = require('crypto')
 var fetch = require('node-fetch')
 
+API_ENDPOINT = 'https://discord.com/api/v10'
+CLIENT_ID = process.env.client_id
+CLIENT_SECRET = process.env.client_secret
+
 try{
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -41,12 +45,11 @@ router.get('/', function (req, res, next) {
       .digest('hex');
   const today = new Date()
   const date = today.format("yyyy-mm-dd")
-  fetch("http://ip-api.com/json/" + "130.44.164.73").then((resp)=> resp.json()).then((json) => {
-    console.log(json)
+  fetch("http://ip-api.com/json/" + req.ip).then((resp)=> resp.json()).then((json) => {
       connection.query(
           'INSERT INTO visitorlog VALUES (?, ?, ?, ?, ?);',[hash,json.country, json.region,json.city, date],
           function(error, result, fields){
-              if(error){}
+              if(error){console.log("Repeat IP")}
             }
       )
   })
@@ -54,7 +57,48 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/logs', function (req, res, next) {
-  res.render('logs', {title: 'Express'});
+  console.log(req.cookies)
+  console.log(req.query)
+  if(req.cookies && "discord_id" in req.cookies){
+    console.log("first branch")
+    res.render('logs', {title: 'Express'});
+  }else if(Object.keys(req.query).length <= 0){
+    console.log("second branch")
+    res.render('logslogin', {title: 'Express'});
+  }else{
+    console.log("third branch")
+    data = {
+      client_id: CLIENT_ID,
+      client_secret: CLIENT_SECRET,
+      grant_type: 'authorization_code',
+      code: req.query.code,
+      redirect_uri: "https://joinsdn.com/logs"
+    }
+    console.log(JSON.stringify(data))
+    headers = {
+      'Content-Type':'application/x-www-form-urlencoded'
+    }
+    fetch(API_ENDPOINT + "/oauth2/token", {
+      method: "POST",
+      headers: headers,
+      body: new URLSearchParams(data)
+    }).then(resp => resp.json()).then(json => {
+      console.log(json)
+      res.render("logs")
+    });
+
+  }
+
+});
+
+router.get('/logsapi', function(req,res,next){
+  connection.query(
+      'SELECT * FROM visitorlog',
+      function(error, result, fields){
+        if(error){}
+        res.json(result)
+      }
+  )
 });
 
 // router.get('')
