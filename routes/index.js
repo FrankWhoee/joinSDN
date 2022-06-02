@@ -61,14 +61,11 @@ router.get('/logs', function (req, res, next) {
     res.clearCookie('discord_id');
     return res.redirect("/")
   }
-  if(req.cookies && "discord_id" in req.cookies){
-    console.log("first branch")
+  if(req.cookies && "discord_id" in req.cookies && logauth.includes(parseInt(req.cookies.discord_id))){
     res.render('logs', {title: 'Express'});
   }else if(Object.keys(req.query).length <= 0){
-    console.log("second branch")
     res.render('logslogin', {title: 'Express'});
   }else{
-    console.log("third branch")
     data = {
       client_id: CLIENT_ID,
       client_secret: CLIENT_SECRET,
@@ -76,7 +73,6 @@ router.get('/logs', function (req, res, next) {
       code: req.query.code,
       redirect_uri: "https://joinsdn.com/logs"
     }
-    console.log(JSON.stringify(data))
     headers = {
       'Content-Type':'application/x-www-form-urlencoded'
     }
@@ -85,12 +81,16 @@ router.get('/logs', function (req, res, next) {
       headers: headers,
       body: new URLSearchParams(data)
     }).then(resp => resp.json()).then(json => {
-      console.log(json)
       fetch(API_ENDPOINT + "/users/@me", {
         method: "GET",
         headers: {"Authorization":"Bearer " + json.access_token}
       }).then(respp => respp.json()).then(user => {
-        return res.cookie('discord_id', user.id).redirect('/logs')
+        user.id = parseInt(user.id)
+        if(logauth.includes(user.id)){
+          return res.cookie('discord_id', user.id).redirect('/logs')
+        }else{
+          return res.redirect("/")
+        }
       })
     });
   }
