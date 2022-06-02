@@ -11,7 +11,7 @@ var fetch = require('node-fetch')
 API_ENDPOINT = 'https://discord.com/api/v10'
 CLIENT_ID = process.env.client_id
 CLIENT_SECRET = process.env.client_secret
-
+logauth = JSON.parse(process.env.logauth)
 try{
   var connection = mysql.createConnection({
     host: 'localhost',
@@ -57,8 +57,10 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/logs', function (req, res, next) {
-  console.log(req.cookies)
-  console.log(req.query)
+  if(req.query.logout === "true"){
+    res.clearCookie('discord_id');
+    return res.redirect("/")
+  }
   if(req.cookies && "discord_id" in req.cookies){
     console.log("first branch")
     res.render('logs', {title: 'Express'});
@@ -84,11 +86,14 @@ router.get('/logs', function (req, res, next) {
       body: new URLSearchParams(data)
     }).then(resp => resp.json()).then(json => {
       console.log(json)
-      res.render("logs")
+      fetch(API_ENDPOINT + "/users/@me", {
+        method: "GET",
+        headers: {"Authorization":"Bearer " + json.access_token}
+      }).then(respp => respp.json()).then(user => {
+        return res.cookie('discord_id', user.id).redirect('/logs')
+      })
     });
-
   }
-
 });
 
 router.get('/logsapi', function(req,res,next){
